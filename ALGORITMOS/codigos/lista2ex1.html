@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 2 - Ex 1</title>
+</head>
+<body>
+    
+    <label for="inCidadeNatal">Insira a sua cidade natal:</label><br>
+    <input id="inCidadeNatal" type="text"><br>
+    <span>Insira o ano de nascimento:</span><br>
+    <input id="inAnoNascimento" type="text"><br>
+    <button onclick="mensagem()">Cadastrar</button>
+
+
+</body>
+</html>
+
+<script>
+
+    function mensagem(){
+        alert("Você nasceu na cidade de " + inCidadeNatal.value + " em " + inAnoNascimento.value);
+
+    }
+
+
+</script>

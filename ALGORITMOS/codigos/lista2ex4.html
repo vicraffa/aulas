@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 2 - EX 4</title>
+</head>
+<body>
+    
+    <label for="inLogradouro">Insira o nome da sua Rua/Avenida/Vila</label><br>
+    <input type="text" id="inLogradouro"><br>
+    <label for="inNumeroCasa">Insira o número da sua casa:</label><br>
+    <input type="text" id="inNumeroCasa"><br>
+    <button onclick="exibirLogradouro()">Onde eu moro</button>
+
+</body>
+</html>
+
+
+<script>
+
+    function exibirLogradouro(){
+        alert("Seu logradouro é " + inLogradouro.value);
+    
+        alert("O número do seu logradouro é " + inNumeroCasa.value);
+    }
+
+</script>

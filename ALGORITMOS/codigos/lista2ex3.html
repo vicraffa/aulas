@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 2 - EX 3</title>
+</head>
+<body>
+    
+    <label for="inTime">Insira o nome do seu time:</label><br>
+    <input id="inTime" type="text"><br>
+    <label for="inQtdTitulo">Insira a quantidade de titulos que o seu clube possui:</label><br>
+    <input type="text" id="inQtdTitulo"><br>
+    <button onclick="exibirMensagem()">Amo meu time</button><br>
+
+
+
+</body>
+</html>
+
+<script>
+
+    function exibirMensagem(){
+        alert("O time " + inTime.value + " tem " + inQtdTitulo.value + " títulos.");
+    }
+
+</script>

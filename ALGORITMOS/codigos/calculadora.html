@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    Primeiro número:
+    <input type="text" id="inPrimeiro"> <br>
+
+    Segundo número:
+    <input type="text" id="inSegundo"> <br>
+
+    <button onclick="Somar()">Somar</button>
+    <button onclick="Subtrair()">Subtrair</button>
+    <button onclick="Multiplicar()">Multiplicar</button>
+    <button onclick="Dividir()">Dividir</button>
+
+    <div id="divResultado"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function Somar() {
+        divResultado.innerHTML = 
+        `${inPrimeiro.value} + ${inSegundo.value}  é: 
+        ${(Number(inPrimeiro.value) + Number(inSegundo.value))}`;
+    }
+
+    function Subtrair() {
+        divResultado.innerHTML = 
+        `${inPrimeiro.value} - ${inSegundo.value}  é: 
+        ${Number(inPrimeiro.value) - Number(inSegundo.value)}`;
+    }
+
+    function Multiplicar() {
+        divResultado.innerHTML = 
+        `${inPrimeiro.value} * ${inSegundo.value}  é: 
+        ${Number(inPrimeiro.value) * Number(inSegundo.value)}`;
+        
+        
+    }
+
+    function Dividir() {
+        divResultado.innerHTML = 
+        `${inPrimeiro.value} / ${inSegundo.value}  é: 
+        ${Number(inPrimeiro.value) / Number(inSegundo.value)}`;
+        
+        
+        
+        
+    }
+
+</script>

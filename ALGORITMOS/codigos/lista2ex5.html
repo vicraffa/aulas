@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 2 - EX 5</title>
+</head>
+<body>
+    
+    <label for="inNota">Qual a sua nota na escola:</label><br>
+    <input type="text" id="inNota"><br>
+    <button onclick="opiniaoAvo()">Opinião da Avó</button><br>
+    <button onclick="opiniaoMae()">Opinião da Mãe</button>
+
+
+    
+</body>
+</html>
+
+<script>
+
+    function opiniaoAvo(){
+        alert("Muito bem, que neto inteligente, porque tirou " + inNota.value);
+    }
+
+    function opiniaoMae(){
+        alert("Não fez mais que tua obrigação com essa nota " + inNota.value);
+    }
+
+</script>
