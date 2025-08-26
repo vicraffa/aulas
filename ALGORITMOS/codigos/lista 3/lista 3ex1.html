@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>Lista 3 - Ex 1</title>
 </head>
 
 <body>
@@ -30,32 +30,27 @@
 
     function Somar() {
         divResultado.innerHTML = 
-        `${inPrimeiro.value} + ${inSegundo.value}  é: 
+        `A soma entre ${inPrimeiro.value} e ${inSegundo.value}  é: 
         ${(Number(inPrimeiro.value) + Number(inSegundo.value))}`;
     }
 
     function Subtrair() {
         divResultado.innerHTML = 
-        `${inPrimeiro.value} - ${inSegundo.value}  é: 
+        `A diferença entre ${inPrimeiro.value} e ${inSegundo.value}  é: 
         ${Number(inPrimeiro.value) - Number(inSegundo.value)}`;
     }
 
     function Multiplicar() {
         divResultado.innerHTML = 
-        `${inPrimeiro.value} * ${inSegundo.value}  é: 
+        `O produto entre ${inPrimeiro.value} e ${inSegundo.value}  é: 
         ${Number(inPrimeiro.value) * Number(inSegundo.value)}`;
-        
-        
+     
     }
 
     function Dividir() {
         divResultado.innerHTML = 
-        `${inPrimeiro.value} / ${inSegundo.value}  é: 
-        ${Number(inPrimeiro.value) / Number(inSegundo.value)}`;
-        
-        
-        
-        
+        `A razão entre ${inPrimeiro.value} e ${inSegundo.value}  é: 
+        ${Number(inPrimeiro.value) / Number(inSegundo.value)}`;        
     }
 
 </script>

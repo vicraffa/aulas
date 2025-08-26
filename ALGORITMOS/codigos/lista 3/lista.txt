@@ -1,0 +1,66 @@
+3. Fazendo divisão
+
+Faça uma calculadora que sabe somente fazer a operação de divisão, assim:
+
+a) Receba dois números
+
+b) Tenha o botão "Quociente" que quando clicado emitirá a mensagem "A divisão de N1 por N2 é: XXX", sendo que N1 é o primeiro número recebido, N2 é o segundo e XXX é o quociente da divisão.
+
+b) Tenha o botão "Resto" que quando clicado emitirá a mensagem "O resto da divisão de N1 por N2 é: XXX", sendo que N1 é o primeiro número recebido, N2 é o segundo e XXX é o resto da divisão.
+
+c) Tenha o botão "Completo" que quando clicado emitirá a mensagem "A divisão de N1 por N2 é: XXX e o resto dessa divisão é: YYY", sendo que N1 é o primeiro número recebido, N2 é o segundo, XXX é o quociente da divisão e YYY é o resto dessa divisão.
+OBS: na próxima aula, veremos mais detalhes sobre como utilizar o operador "%" para obter o resto da divisão. (utilizando "10 % 3", obtem-se o resto da divisão, ao invés do quociente/resultado - faça o teste no console do navegador!)
+
+4. Dividindo a Pizza
+
+Todo mundo adora pizza! Existem para todos os gostos! Crie um programa que ajude um grupo de amigos a saber quanto uma pizza vai custar para cada amigo.  
+
+a) Solicite o valor da pizza e a quantidade de amigos que vão dividir o valor.  
+
+b) Ao clicar num botão "#lovePizza", exiba uma mensagem com a frase  
+
+     "Cada um dos X amigos vai pagar R$Y"  
+
+Onde X é a quantidade de amigos e Y é o resultado do cálculo que seu programa fará  
+
+
+5. Economia com o Bilhete Único
+
+Um estudante recebeu o Bilhete Único de estudante pela primeira vez e deseja saber quanto vai economizar por mês. O valor para estudante é metade do valor da passagem. Crie um programa que:  
+
+a) Pergunte a ele o valor da passagem  
+
+b) Pergunte a ele quantas viagens fará por mês  
+
+c) Ao clicar num botão "Ver economia", deve ver uma mensagem com uma frase como esta: "Você economizará R$X por mês"  
+
+ 
+
+6. Nota da Atividade Avaliativa
+Faça um programa para calcular o valor da nota da atividade avaliativa sendo:
+
+a) O nome do aluno
+
+b)  Pergunte o valor da Ativ. Avaliativa 1, Ativ. Avaliativa 2 e Ativ. Avaliativa 3
+
+c) Ao clicar no botão “Mostrar Nota” o programa deve emitir as seguintes mensagens:
+
+                A soma das suas três atividades é: 9999 
+
+                XXXX, a média das suas atividades é: 9999,9999 
+
+(OBS. XXXX é o nome do aluno)
+
+ 
+
+7. Cálculo da média da SPTech
+
+Na faculdade SPTech o aluno tem 2 notas: A da "avaliação continuada" e a da "avaliação semestral". A média final é a soma simples entre 40% da "continuada" e 60% da "semestral". Assim, para ajudar um aluno para saber o quanto precisa para passar de semestre e estagiar em empresas como C6Bank, Tivit, Banco Safra, Deloitte, HP etc, crie um programa que:  
+
+a) Solicite a nota que ele tirou na "continuada" e na "semestral"  
+
+b) Solicite o nome do aluno  
+
+c) Calcule sua média  
+
+d) Exiba uma frase como esta "A média de NOME será de MEDIA". Onde NOME é o valor informado em b) e MEDIA, o valor calculado em c) 

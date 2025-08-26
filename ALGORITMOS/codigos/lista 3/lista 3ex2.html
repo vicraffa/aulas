@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 - Ex 2</title>
+</head>
+
+<body>
+
+    Qual a sua idade?
+    <input type="text" id="in_idade"><br>
+    <button onclick="btn_aposentadoria_homem()">Aposentadoria Homem</button>
+    <button onclick="btn_aposentadoria_mulher()">Aposentadoria Mulher</button>
+
+    <div id="div_resultado"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function btn_aposentadoria_homem(){
+        var idade = Number(in_idade.value);
+        var idade_para_aposentar = 70 - idade;
+
+        div_resultado.innerHTML = `Ainda faltam ${idade_para_aposentar} anos para se aposentar.`
+    }
+
+    function btn_aposentadoria_mulher(){
+        var idade = Number(in_idade.value);
+        var idade_para_aposentar = 60 - idade;
+
+        div_resultado.innerHTML = `Ainda faltam ${idade_para_aposentar} anos para se aposentar.`
+    }
+
+</script>
