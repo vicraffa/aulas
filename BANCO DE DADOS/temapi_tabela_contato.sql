@@ -1,0 +1,15 @@
+CREATE DATABASE temapi;
+USE temapi;
+
+CREATE TABLE entre_em_contato(
+idContato INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50) NOT NULL,
+sobrenome VARCHAR(50) NOT NULL,
+email VARCHAR(50) NOT NULL,
+telefone CHAR(12),
+celular CHAR(13) NOT NULL, 
+empresa VARCHAR(50) NOT NULL,
+cnpj CHAR(14) NOT NULL UNIQUE,
+cargo VARCHAR(30) NOT NULL,
+comentario VARCHAR(500) NOT NULL
+);
