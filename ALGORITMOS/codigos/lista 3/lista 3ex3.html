@@ -9,24 +9,51 @@
 
 <body>
     
-    Insira um número:
+    <label for="in_n1">Insira um número:</label>
     <input type="text" id="in_n1">
     <br>
-    Insira outro número:
+    <label for="in_n2">Insira outro número:</label>
     <input type="text" id="in_n2">
     <br>
 
     <button onclick="btn_quociente()">Quociente</button>
     <button onclick="btn_resto()">Resto</button>
-    <button onclick="completo()">Completo</button>
+    <button onclick="btn_completo()">Completo</button>
 
-    <div id="div_resultado"></div>
+    <div id="div_mensagem"></div>
 
 </body>
 </html>
 
 <script>
 
+    function btn_quociente(){
+        var n1 = Number(in_n1.value);
+        var n2 = Number(in_n2.value);
 
+        var quociente = n1 / n2;
+
+        div_mensagem.innerHTML = `A divisão de ${n1} por ${n2} é: ${quociente}.`;
+    };
+
+    function btn_resto(){
+        var n1 = Number(in_n1.value);
+        var n2 = Number(in_n2.value);
+
+        var resto = n1 % n2;
+
+        div_mensagem.innerHTML = `O resto da divisão de ${n1} por ${n2} é ${resto}.`;
+    };
+
+    function btn_completo(){
+        var n1 = Number(in_n1.value);
+        var n2 = Number(in_n2.value);
+
+        var quociente = n1 / n2;
+        var resto = n1 % n2;
+
+        div_mensagem.innerHTML = `A divisão de ${n1} por ${n2} é: ${quociente} 
+        e o resto dessa divisão é: ${resto}.`;
+    };
 
 </script>

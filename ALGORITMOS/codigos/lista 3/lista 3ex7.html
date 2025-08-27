@@ -4,14 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista 3 - Ex ?</title>
+    <title>Lista 3 - Ex 7</title>
 </head>
 
 <body>
     
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore soluta accusamus quaerat quasi aliquam, aspernatur rem quod inventore harum quam. Quasi explicabo eveniet harum veritatis, ipsa cupiditate reprehenderit deleniti ab.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, odit sunt fuga ea odio dolorum ipsa, voluptatibus repudiandae modi sint iure libero! Omnis mollitia consequatur corrupti adipisci voluptates numquam veritatis.
-    <div id="div_resultado"></div>
+    <label for="in_nota_continuada">
+        Insira a sua nota na continuada:
+        <input type="text" id="in_nota_continuada">
+        <br>
+    </label>
+    
+    <label for="in_nota_semestral">
+        Insira a sua nota semestral:
+        <input type="text" id="in_nota_semestral">
+        <br>
+    </label>
+    
+    <label for="in_nome_aluno">
+        Qual o seu nome?
+        <input type="text" id="in_nome_aluno">
+        <br>
+    </label>
+
+    <button onclick="btn_calcular_media()">Calcular Média</button>
+
+    <div id="div_mensagem"></div>
 
 </body>
 
@@ -19,5 +37,18 @@
 
 <script>
 
+    function btn_calcular_media(){
+        var nome_aluno = in_nome_aluno.value;
+        var nota_continuada = Number(in_nota_continuada.value);
+        var nota_semestral = Number(in_nota_semestral.value);
 
+        var media_continuada = nota_continuada * 0.4;
+        var media_semestral = nota_semestral * 0.6;
+
+        var media_final = media_continuada + media_semestral;
+
+        div_mensagem.innerHTML = 
+        `A média de ${nome_aluno} será de ${media_final}.`;
+
+    };
 </script>

@@ -4,19 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista 3 - Ex ?</title>
+    <title>Lista 3 - Ex 4</title>
 </head>
 
 <body>
-    
+        <label for="in_preco_pizza">Qual é o preço da pizza?</label>
+        <input type="text" id="in_preco_pizza"><br>
+        <label for="in_qtd_amigos">Quantos amigos irão dividir essa pizza?</label>
+        <input type="text" id="in_qtd_amigos"><br>
 
-    <div id="div_resultado"></div>
+        <button onclick="btn_mensagem()">#lovePizza</button>
+
+    <div id="div_mensagem"></div>
 
 </body>
 
 </html>
 
 <script>
+
+    function btn_mensagem(){
+        var preco = Number(in_preco_pizza.value);
+        var qtd_amigos = Number(in_qtd_amigos.value);
+
+        var valor_dividido = preco / qtd_amigos;
+
+        div_mensagem.innerHTML = `Cada um dos ${qtd_amigos} amigos vai pagar R$${valor_dividido}.`;
+    };
 
 
 </script>

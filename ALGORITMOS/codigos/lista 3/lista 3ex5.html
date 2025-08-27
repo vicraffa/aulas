@@ -4,19 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista 3 - Ex ?</title>
+    <title>Lista 3 - Ex 5</title>
 </head>
 
 <body>
     
+    <label for="in_valor_passagem">Qual o valor da passagem?</label>
+    <input type="text" id="in_valor_passagem"><br>
+    <label for="in_viagens">Quantas viagens irá realizar por mês?</label>
+    <input type="text" id="in_viagens"><br>
 
-    <div id="div_resultado"></div>
+    <button onclick="btn_economia()">Ver economia</button>
+
+    <div id="div_mensagem"></div>
 
 </body>
 
 </html>
 
 <script>
+
+    function btn_economia(){
+        var valor_passagem = Number(in_valor_passagem.value);
+        var qtd_viagens = Number(in_viagens.value);
+
+        var valor_economizado = (valor_passagem / 2) * qtd_viagens;
+
+        div_mensagem.innerHTML = `Você economizará R$${valor_economizado} por mês.`;
+    }
 
 
 </script>

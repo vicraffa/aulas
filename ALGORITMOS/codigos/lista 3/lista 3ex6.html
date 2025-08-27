@@ -4,13 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista 3 - Ex ?</title>
+    <title>Lista 3 - Ex 6</title>
 </head>
 
 <body>
     
+    <label for="in_nome_aluno">
+        Insira o seu nome:
+        <input type="text" id="in_nome_aluno"><br>
+    </label>
+    
+    <span>Insira o valor das atividades avaliativas.</span><br>
 
-    <div id="div_resultado"></div>
+    <label for="in_ativ_av1">
+        Ativ. Avaliativa 1:
+        <input type="text" id="in_ativ_av1">
+        <br>
+    </label>
+
+    <label for="in_ativ_av2">
+        Ativ. Avaliativa 2:
+        <input type="text" id="in_ativ_av2">
+        <br>
+    </label>
+
+    <label for="in_ativ_av3">
+        Ativ. Avaliativa 3:
+        <input type="text" id="in_ativ_av3">
+        <br>
+    </label>
+
+    <button onclick="btn_nota()">Mostrar Nota</button> 
+
+    <div id="div_mensagem"></div>
 
 </body>
 
@@ -18,5 +44,19 @@
 
 <script>
 
+    function btn_nota(){
+        var nome_aluno = in_nome_aluno.value;
+        var nota_av1 = Number(in_ativ_av1.value);
+        var nota_av2 = Number(in_ativ_av2.value);
+        var nota_av3 = Number(in_ativ_av3.value);
+
+        var total_nota = nota_av1 + nota_av2 + nota_av3;
+        var media_nota = total_nota / 3;
+
+        div_mensagem.innerHTML = 
+        `A soma das suas três atividades é: ${total_nota} 
+        <br>
+        ${nome_aluno}, a média das suas atividades é: ${media_nota}.`;
+    };
 
 </script>
