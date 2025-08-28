@@ -13,7 +13,7 @@
         <input type="text" id="in_horas_dormidas"><br>
     </label>
 
-    <button onclick="calculo_sono()">Calcular Sono</button>
+    <button onclick="btn_calculo_sono()">Calcular Sono</button>
 
     <div id="div_mensagem"></div>
 
@@ -23,7 +23,7 @@
 
 <script>
 
-    function calculo_sono(){
+    function btn_calculo_sono(){
         var horas_dormidas = Number(in_horas_dormidas.value);
 
         var fase1 = horas_dormidas * 0.05;

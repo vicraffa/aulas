@@ -9,7 +9,26 @@
 
 <body>
     
-    
+    <label for="in_sabor_pizza">
+        Insira o sabor da pizza:
+        <input type="text" id="in_sabor_pizza">
+        <br>
+    </label>
+
+    <label for="in_preco_pizza">
+        Insira o preço da pizza:
+        <input type="text" id="in_preco_pizza">
+        <br>
+    </label>
+
+    <label for="in_qtd_amigos">
+        Quantos amigos irão comer?
+        <input type="text" id="in_qtd_amigos">
+        <br>
+    </label>
+
+    <button onclick="valor_por_amigo()">Ver valor por amigo</button>
+
     <div id="div_mensagem"></div>
 
 </body>
@@ -17,5 +36,17 @@
 </html>
 
 <script>
+
+    function valor_por_amigo(){
+        var sabor = in_sabor_pizza.value;
+        var preco = Number(in_preco_pizza.value);
+        var qtd_amigos = Number(in_qtd_amigos.value);
+
+        var valor_com_gorjeta = preco + (preco * 0.1);
+        var valor_final = valor_com_gorjeta / qtd_amigos;
+
+        div_mensagem.innerHTML = 
+        `Cada amigo vai colaborar com R$${valor_final} para a pizza de ${sabor}.`;
+    };
 
 </script>

@@ -9,6 +9,21 @@
 
 <body>
     
+    <label for="in_ki_base">
+    Insira o KI Base:
+    <input type="text" id="in_ki_base">
+    <br>
+    </label>
+    <div>
+        <span>
+            Transformar em...
+        </span>
+    </div>
+
+    <button onclick="btn_SSJ()">SSJ</button>
+    <button onclick="btn_SSJ2()">SSJ2</button>
+    <button onclick="btn_SSJ3()">SSJ3</button>
+    <br>
 
     <div id="div_mensagem"></div>
 
@@ -18,8 +33,30 @@
 
 <script>
 
-    function btn_calcular_sono(){
-        
+    function btn_SSJ(){
+        var ki_base = Number(in_ki_base.value);
+        var ki_ssj = ki_base * 50;
+
+        div_mensagem.innerHTML = `
+        Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${ki_ssj}
+        `;
     };
 
+    function btn_SSJ2(){
+        var ki_base = Number(in_ki_base.value);
+        var ki_ssj2 = ki_base * 100;
+
+        div_mensagem.innerHTML = `
+        Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${ki_ssj2}
+        `;
+    };
+
+    function btn_SSJ3(){
+        var ki_base = Number(in_ki_base.value);
+        var ki_ssj3 = ki_base * 200;
+
+        div_mensagem.innerHTML = `
+        Após se transformar em SSJ3, o ki desse Sayajin passa a ser de ${ki_ssj3}
+        `;
+    };
 </script>

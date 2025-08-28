@@ -9,6 +9,17 @@
 
 <body>
     
+    <label for="in_peso">
+        Insira o seu peso em kg:
+        <input type="text" id="in_peso"><br>
+    </label>
+
+    <label for="in_altura">
+        Insira a sua altura em metro:
+        <input type="text" id="in_altura"><br>
+    </label>
+
+    <button onclick="btn_calcular_imc()">Calcular IMC</button>
 
     <div id="div_mensagem"></div>
 
@@ -17,5 +28,17 @@
 </html>
 
 <script>
+
+    function btn_calcular_imc(){
+        var peso = Number(in_peso.value);
+        var altura = Number(in_altura.value);
+
+        //A formula de IMC simples é: IMC = Peso (em kg) / Altura (em (metro)²)
+        var imc = peso / (altura * altura);
+        
+        div_mensagem.innerHTML = 
+        `O seu IMC é: ${imc}kg/m2.`;
+    };
+ 
 
 </script>
