@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 - EX 8</title>
+</head>
+
+<body>
+        Quanto quer depositar ou retirar? <br>R$<input id="in_quantia" type="text"><br>
+        <button onclick="fun_depositar()">Depositar</button>
+        <button onclick="fun_retirar()">Retirar</button>
+    
+</body>
+
+</html>
+
+<script>
+    var saldo = 0;
+
+    function fun_depositar(){
+        var quantia = Number(in_quantia.value);
+        saldo = Number(saldo) + Number(quantia);
+
+        alert(`Depósito de R$${quantia} efetuado! Saldo atual: R$${saldo}.`)
+    }
+
+    function fun_retirar(){
+        var quantia = Number(in_quantia.value);
+        saldo = saldo - quantia;
+
+        alert(`Retirada de R$${quantia} efetuada! Saldo atual: R$${saldo}.`)
+    }
+    
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="receber()">Receber 100</button>
+    <button onclick="pagar()">Pagar 50</button>
+    
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    // declara a variável "saldo", que é GLOBAL e pertence a tag <script>, ou seja, é visível para todo o JS
+    var saldo = 0; 
+
+    // a div inicia vazia, então atualizamos seu conteúdo com base no valor da variável "saldo"
+    div_mensagem.innerHTML = "Saldo atual: " + saldo; // utilizando CONCATENAÇÃO => "fixo" + dinamico
+
+    function receber() {
+        saldo = saldo + 100; // reatribui o valor da variável "saldo" com a soma do seu próprio valor atual + 100
+        div_mensagem.innerHTML = `Transferência de R$100 recebida! Saldo atual: R$${saldo}`; // utilizando INTERPOLAÇÃO
+    }
+
+    function pagar() {
+        saldo = saldo - 50; // reatribui o valor da variável "saldo" com a subtração do seu próprio valor atual - 50
+        div_mensagem.innerHTML = `Pagamento de R$50 efetuado! Saldo atual: R$${saldo}`; // utilizando INTERPOLAÇÃO
+    }
+
+    
+    /*
+        Neste exemplo, a variável "saldo" é declarada como "variável global".
+
+        "Global" significa que a variável está disponível em qualquer parte do código, dentro ou fora de funções (inclusive, pode ser manipulada através do console).
+        - Diferente das variáveis locais, que só existem dentro da função onde foram declaradas, uma variável global pode ser acessada e modificada por qualquer outra função.
+
+        Comportamento das variáveis globais:
+        - A variável é criada quando o script é carregado e continua existindo até que a página seja fechada ou o script seja interrompido.
+        - Ela pode ser usada e modificada por qualquer função, permitindo que seu valor seja mantido entre diferentes chamadas de função.
+
+        No exemplo atual, a variável "contador" é incrementada a cada vez que a função "incrementar()" é chamada.
+        Como "contador" é global, seu valor não é redefinido a cada execução da função, permitindo que o valor seja preservado e acumulado entre as chamadas.
+        - Caso a variável fosse declarada dentro de uma função, a cada execução da função, iria redefinir o valor da variável para 0 (como no exemplo anterior).
+
+        Isso resolve o problema do contador que sempre reiniciava, permitindo que o valor seja corretamente incrementado e exibido a cada clique no botão.
+    */
+</script>

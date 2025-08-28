@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 - EX 1</title>
+</head>
+
+<body>
+    
+    Insira a sua idade <input id="in_idade" type="text"> <br>
+    <button onclick="fun_ap_homem()">Aposentadoria Homem</button>
+    <button onclick="fun_ap_mulher()">Aposentadoria Mulher</button>
+
+
+</body>
+
+</html>
+
+<script>
+    
+    function fun_ap_homem(){
+        var input_idade = in_idade.value;
+        var fixo_homem = 70;
+        var tempo_homem = fixo_homem - input_idade;
+        var mensagem = "O tempo que você ainda deverá contribuir para ter direito a sua aposentadoria é ";
+    
+        alert( mensagem + tempo_homem )
+    }
+
+    function fun_ap_mulher(){
+        var input_idade = in_idade.value;
+        var fixo_mulher = 60;
+        var tempo_mulher = fixo_mulher - input_idade;
+        var mensagem = "O tempo que você ainda deverá contribuir para ter direito a sua aposentadoria é ";
+
+        alert( mensagem + tempo_mulher )
+    }
+
+</script>

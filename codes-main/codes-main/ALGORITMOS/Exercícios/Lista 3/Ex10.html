@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 - EX 10</title>
+</head>
+<body>
+    
+    Quantos votos o Candidato A obteve?<br>
+    <input type="text" id="in_voto_a"><br>
+    Quantos votos o Candidato B obteve?<br>
+    <input type="text" id="in_voto_b"><br>
+    Quantos votos em branco houveram?<br>
+    <input type="text" id="in_voto_branco"><br>
+    Quantos votos nulos houveram?<br>
+    <input type="text" id="in_voto_nulo"><br>
+    <button onclick="fun_resultado()">Resultado da Eleição</button>
+
+    <div id="div_votos"></div>
+
+</body>
+</html>
+
+<script>
+
+    function fun_resultado(){
+        var VotoA = Number(in_voto_a.value);
+        var VotoB = Number(in_voto_b.value);
+        var Branco = Number(in_voto_branco.value);
+        var Nulo = Number(in_voto_nulo.value);
+
+        var VotoTotal = VotoA + VotoB + Branco + Nulo;
+        var VotoInvalido = Branco + Nulo;
+        var PorcentagemA = (VotoA / VotoTotal) * 100;
+        var PorcentagemB = (VotoB / VotoTotal) * 100;
+        var PorcentagemInvalido = (VotoInvalido / VotoTotal) * 100;
+
+        mensagem = 
+        `Total de votos: ${VotoTotal}<br>  
+        <br>
+        Candidato A: ${PorcentagemA}% (${VotoA} votos)<br>  
+        <br>
+        Candidato B: ${PorcentagemB}% (${VotoB} votos)<br>
+        <br>
+        Inválidos: ${PorcentagemInvalido}% (${VotoInvalido} votos)<br>`;
+
+        div_votos.innerHTML = mensagem;
+
+    }
+
+</script>

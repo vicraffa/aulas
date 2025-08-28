@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nome: <input id="input_nome" type="text"> <br>
+    <button onclick="cumprimentar()">Cumprimentar</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    // var nome = input_nome.value; // não funcionará, pois o usuário ainda não interagiu com a input
+    var nome = ""; // ao carregar a página, declara a variável nome como um texto vazio
+
+    function cumprimentar() {
+        nome = input_nome.value; // a cada chamada da função cumprimentar, reatribui o valor da variável global "nome"
+        div_mensagem.innerHTML = "Olá, " + nome;
+    }
+
+    var idade = 19;
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01</title>
+</head>
+
+<body>
+
+<div id="cab1">    
+    <h1>Olá Mundo!</h1>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores minima dolorem in molestias. Dignissimos nulla nam, iste dolore saepe nihil minus sed, exercitationem sunt fuga adipisci aut facilis sapiente neque.</p>
+    
+    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+    <input id="nome1" type="text">
+    <button onclick="cumprimentar()">Cumprimentar</button>
+</div>
+
+<div id="cab2">
+    <h2>Advent Cross Blass</h2>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores minima dolorem in molestias. Dignissimos nulla nam, iste dolore saepe nihil minus sed, exercitationem sunt fuga adipisci aut facilis sapiente neque. </p>
+    
+    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>   
+     <input type="hidden"> 
+    <input id="nome2" type="text">
+    <button onclick="cumprimentar()">Cumprimentar novamente</button> 
+</div>
+
+</body>
+
+</html>
+
+<script>
+
+    function cumprimentar(){
+        alert('Bem vindo, ' + nome1.value + nome2.value + '!' )
+    }
+
+</script>
+
+

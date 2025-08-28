@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 7 - Ex 02</title>
+</head>
+<body>
+    
+    Insira a sua nota do ENEM: <input type="text" id="in_notaEnem"><br>
+    Insira sua nota do vestibular interno: <input type="text" id="in_notaInterna"><br>
+    <button onclick="analisarAprovacao()">Avaliação</button>
+
+</body>
+</html>
+
+<script>
+
+function analisarTemperatura() {
+    var notaEnem = Number(in_notaEnem.value);
+    var notaInterna = Number(in_notaInterna.value);  
+    
+    if(notaEnem >= 800 || notaInterna >= 700){
+        alert("Parabéns! Aprovado");
+    }else{
+        alert("Tente semestre que vem!")
+    }
+  }
+
+</script>

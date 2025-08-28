@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 05 - Ex 05</title>
+</head>
+<body>
+    
+    Qual a nota do aluno: <input type="text" id="in_nota"><br>
+    <button onclick="calculo()">Classificar aluno</button>
+
+    <div id="mensagem"></div>
+
+</body>
+</html>
+
+<script>
+    function calculo(){
+        var nota = Number(in_nota.value);
+
+        if(nota < 5){
+            alert("Aluno precisa de muita ajuda.");
+        }else if(nota <= 7){
+            alert("Aluno na média.");
+        }else if(nota <= 9.5){
+            alert("Aluna acima da média.");
+        }else if(nota > 9.5){
+            alert("Aluna fora de curva.");
+        }
+        
+    }
+</script>

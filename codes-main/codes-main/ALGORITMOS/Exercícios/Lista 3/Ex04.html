@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 - EX 4</title>
+</head>
+
+<body>
+    
+    Olá Guerreiro Sayajin, qual o seu nome? <input id="in_nome" type="text"> <br>
+    Na sua forma comum, qual a sua quantidade de KI? <input id="in_qntd_ki" type="text"> <br>
+
+    <button onclick="fun_mostrar_ki()">Ver ki em cada forma</button>
+ 
+
+
+</body>
+
+</html>
+
+<script>
+    
+    function fun_mostrar_ki(){
+        var normal = in_qntd_ki.value;
+        var super1 = normal * 50;
+        var super2 = normal * 100;
+        var nome = in_nome.value;
+
+        alert(
+        `Caro Guerreiro Sayajin ${nome}, a sua quantidade de KI na forma Super Sayajin é ${super1}.`
+        )
+
+        alert(
+        `Caro Guerreiro Sayajin ${nome}, a sua quantidade de KI na forma Super Sayajin 2 é ${super2}.`
+        )
+    }
+
+</script>

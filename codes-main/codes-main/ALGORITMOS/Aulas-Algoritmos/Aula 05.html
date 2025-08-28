@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05</title>
+</head>
+<body>
+    
+    Insira a temperatura: <input type="text" id="in_temp"><br>
+    <button onclick="analisar()">Analisar</button>
+
+</body>
+</html>
+
+<script>
+
+function analisar() {
+    var temp = Number(in_temp.value);
+
+    // ESTRUTURA DE DECISÃO ANINHADA
+    // if (temp < 21) {
+    //   alert("Temperatura Desconfortável");
+    // } else if (temp > 24) {
+    //   alert("Temperatura Desconfortável");
+    // } else {
+    //   alert("Temperatura Confortável");
+    // }
+
+
+    // OPERADORES ARITMÉTICOS
+    // +-/*    -> RETORNA NUMBER
+    // ><== != -> RETORNA BOOLEAN
+    // LÓGICOS -> RETORNA BOOLEAN
+
+    // UTILIZANDO OPERADORES LÓGICOS
+    // && == AND (SE UTILIZAR APENAS UM & ELE SERVIRÁ COMO BITWISE E PODE APRESENTAR UM FUNCIONAMENTO DIFERENTE)
+    // || == OR
+    
+    
+    
+    // && == AND
+    if(temp >= 21 && temp <= 24){
+        alert("Temperatura Confortável");
+    }else{
+        alert("Temperatura Desconfortável");
+    }
+
+    // || == OR
+    if(temp < 21 || temp > 24){
+        alert("Temperatura Desconfortável");
+    }else{
+        alert("Temperatura Confortável");
+    }
+  }
+
+</script>

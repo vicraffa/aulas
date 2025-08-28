@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 05 - Ex 04</title>
+</head>
+<body>
+    
+    Qual o peso da criança (em KG): <input type="text" id="in_peso"><br>
+    <button onclick="calculo()">A criança está...</button>
+
+    <div id="mensagem"></div>
+
+</body>
+</html>
+
+<script>
+    function calculo(){
+        var peso = Number(in_peso.value);
+
+        if(peso <= 13.5){
+            mensagem.innerHTML = "Abaixo do peso";  
+        }else if(peso <= 21.2){
+            if(peso == 18.3){
+                mensagem.innerHTML = "Peso perfeito";    
+            }else{
+                mensagem.innerHTML = "Peso na média";
+            }
+        }else if(peso > 21.2){
+            mensagem.innerHTML = "Acima do peso";
+        }
+
+        // if(peso <= 13.5){
+        //     mensagem.innerHTML = "Abaixo do peso";
+        // }else if(peso == 18.3){
+        //     mensagem.innerHTML = "Peso perfeito";    
+        // } else if(peso <= 21.2){
+        //     mensagem.innerHTML = "Peso na média";
+        // }else if(peso > 21.2){
+        //     mensagem.innerHTML = "Acima do peso";
+        // }
+    }
+</script>

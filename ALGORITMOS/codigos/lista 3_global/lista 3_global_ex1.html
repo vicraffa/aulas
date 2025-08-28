@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 - Global - Ex 1</title>
+</head>
+<body>
+    
+    <button onclick="receber_100()">Receber 100</button>
+    <button onclick="pagar_50()">Pagar 50</button>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    var saldo_atual = 0;
+
+    function receber_100(){
+        saldo_atual += 100;        
+        
+        div_mensagem.innerHTML = `
+        Transferência de R$100 recebida! 
+        Saldo atual: R$${saldo_atual}.`;
+    };
+
+    function pagar_50(){
+        saldo_atual -= 50;
+
+        div_mensagem.innerHTML = 
+        `Pagamento de R$50 efetuado! 
+        Saldo atual: R$${saldo_atual}.`
+    };
+
+</script>

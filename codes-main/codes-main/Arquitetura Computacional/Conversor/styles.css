@@ -1,0 +1,174 @@
+/* Estilo geral da página */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url(backgroundimg.png) no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container centralizado */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: rgba(165, 162, 157, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.container .tituloconv {
+    color: #d93810;
+}
+
+#tab-home p{
+    font-size: 20px;
+}
+
+/* Abas */
+.tabs {
+    display: flex;
+    width: 100%;
+    background-color: #4CAF50;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.tab:hover {
+    background-color: #e7e7e7;
+}
+
+.active {
+    background-color: #fff;
+    color: #d93810;
+    border-bottom: 2px solid #d93810;
+}
+
+/* Conteúdo das abas */
+.tab-content {
+    display: none;
+    width: 100%;
+}
+
+.active-tab {
+    display: block;
+}
+
+.tab-content h4 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #d93810;
+}
+
+/* Inputs e botões */
+.tab-content input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.tab-content button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #d93810;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-content button:hover {
+    background-color: #ac543e;
+}
+
+/* Mensagens de resultado */
+.mensagem {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mensagem div {
+    padding: 10px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+/* Informações de Contato */
+.contact-info {
+    display: flex;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-info h4 {
+    font-size: 20px;
+    color: #d93810;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.contact-info span {
+    color: #d93810;;
+    font-size: 20px;
+    font-weight:bold;
+}
+
+/* Rodapé fixo */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+

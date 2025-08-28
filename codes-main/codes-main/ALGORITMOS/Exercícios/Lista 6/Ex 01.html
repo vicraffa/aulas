@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 6 - Ex 01</title>
+</head>
+<body>
+    
+    Insira a temperatura: <input type="text" id="in_temp"><br>
+    <button onclick="analisarTemperatura()">Ver situação</button>
+
+</body>
+</html>
+
+<script>
+
+function analisarTemperatura() {
+    var temp = Number(in_temp.value);  
+    
+    // && == AND
+    if(temp >= 21 && temp <= 24){
+        alert("Temperatura Confortável");
+    }else{
+        alert("Temperatura Desconfortável");
+    }
+  }
+
+</script>

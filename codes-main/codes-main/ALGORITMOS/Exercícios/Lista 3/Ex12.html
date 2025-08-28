@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 - EX 12</title>
+</head>
+<body>
+    
+    Qual o sabor da pizza? <input type="text" id="in_sabor"><br>
+    Qual o preço da pizza? <input type="text" id="in_preco"><br>
+    Quantos amigos irão comer? <input type="text" id="in_amigos"><br>
+    <button onclick="fun_valor_amigo()">Ver valor por amigo</button>
+
+    <div id="div_valor"></div>
+
+</body>
+</html>
+
+<script>
+
+    function fun_valor_amigo(){
+        var sabor = in_sabor.value;
+        var preco = Number(in_preco.value);
+        var amigos = Number(in_amigos.value);
+
+        var caixinha = preco * 0.1;
+        var total = preco + caixinha
+        var qntd_amigo = total / amigos;
+
+        mensagem = `Cada amigo vai colaborar com R$${qntd_amigo} para a pizza de ${sabor}.`;
+
+        div_valor.innerHTML = mensagem;
+    }
+
+
+</script>

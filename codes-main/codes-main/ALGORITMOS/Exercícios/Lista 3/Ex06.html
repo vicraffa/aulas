@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 - EX 6</title>
+</head>
+
+<body>
+    
+    Insira um número: <input id="in_numero1" type="text"> <br>
+    Insira outro número: <input id="in_numero2" type="text"> <br>
+
+    <button onclick="fun_soma()">Soma</button>
+
+    <button onclick="fun_subtracao()">Subtração</button>
+
+    <button onclick="fun_multiplicacao()">Multiplicação</button>
+
+    <button onclick="fun_divisao()">Divisão</button>
+ 
+    <div id="div_mensagem"></div>
+
+</body>
+
+</html>
+
+<script>
+    
+    function fun_soma(){
+        var valor1 = in_numero1.value;
+        var valor2 = in_numero2.value;
+        var soma = Number(valor1) + Number(valor2);
+
+        var mensagem = `A soma entre ${valor1} e ${valor2} é ${soma}`;
+
+        div_mensagem.innerHTML = mensagem;
+    }
+
+    function fun_subtracao(){
+       var valor1 = in_numero1.value;
+       var valor2 = in_numero2.value;
+       var subtracao = Number(valor1) - Number(valor2);
+
+       var mensagem = `A diferença entre ${valor1} e ${valor2} é ${subtracao}`;
+
+        div_mensagem.innerHTML = mensagem;
+    }
+
+    function fun_multiplicacao(){
+        var valor1 = in_numero1.value;
+        var valor2 = in_numero2.value;
+        var multiplicacao = Number(valor1) * Number(valor2);
+
+        var mensagem = `O produto entre ${valor1} e ${valor2} é ${multiplicacao}`;
+
+        div_mensagem.innerHTML = mensagem;
+    }
+
+    function fun_divisao(){
+        var valor1 = in_numero1.value;
+        var valor2 = in_numero2.value;
+        var divisao = valor1 / valor2 ;
+
+        var mensagem = `A razão entre ${valor1} e ${valor2} é ${divisao}`;
+
+        div_mensagem.innerHTML = mensagem;
+    }
+</script>

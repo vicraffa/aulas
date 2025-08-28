@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 05 - Ex 06</title>
+</head>
+<body>
+    
+    Qual dos seguintes times você torce (Corinthians, Palmeiras, Santos, São Paulo)? <input type="text" id="in_time"><br>
+    <button onclick="calculo()">Fale sobre esse time</button>
+
+    <div id="mensagem"></div>
+
+    <span style="background-color: black; color: white;"></span>
+
+</body>
+</html>
+
+<script>
+    function calculo(){
+        var time = in_time.value;
+        var mensagem = '';
+
+        if(time == "Corinthians"){
+            cor = `white`;
+            fundo = `black`;
+            mensagem = `Salve o Corinthians`;
+        }else if(time == "Palmeiras"){
+            cor = `white`;
+            fundo = `green`;
+            mensagem = `Salve o Alviverde Imponente`;
+        }else if(time == "Santos"){
+            cor = `black`;
+            fundo = `white`;
+            mensagem = `Agora quem dá a bola é o Santos`;
+        }else if(time == "São Paulo"){
+            cor = `red`;
+            fundo = `black`;
+            mensagem = `Salve o Tricolor Paulista`;
+        }
+        
+        mensagem.style.color = `${cor}`;
+        mensagem.style.backgroundcolor = `${fundo}`;
+        mensagem.innerHTML = `${mensagem}`;
+
+    }
+</script>

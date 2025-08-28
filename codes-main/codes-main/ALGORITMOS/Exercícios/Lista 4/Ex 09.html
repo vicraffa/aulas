@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 4 - EX 09</title>
+</head>
+<body>
+    
+    Qual foi o último seriado SITCOM que você assistiu?(Friends, How I Met Your Mother, Dois Homens e Meio, etc) <input type="text" id="in_ultimoSeriado"><br>
+    Quantos episódios já assistiu desse seriado? <input type="text" id="in_qtdEpisodios"><br>
+    <button onclick="verificarNivel()">Verificar Nível</button><br>
+
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+
+<script>
+
+    function verificarNivel(){
+        var seriado = in_ultimoSeriado.value;
+        var qtdEp = Number(in_qtdEpisodios.value);
+
+        var minutosAssistidos = qtdEp * 22;
+        var horasAssistidas = minutosAssistidos / 60;
+
+        div_mensagem.innerHTML = `Vejo que você gosta da série ${seriado}`;
+
+        if(horasAssistidas > 30){
+            div_mensagem.innerHTML += `<br>Uau, você realmente gosta dessa série!`
+        }
+
+    }
+
+</script>

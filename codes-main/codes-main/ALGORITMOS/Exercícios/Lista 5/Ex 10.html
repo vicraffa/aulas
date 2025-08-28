@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 05 - Ex 010</title>
+</head>
+<body>
+    
+    Qual o seu consumo mensal(em kWh)?<input type="text" id="in_consumo"><br>
+    Quantas o valor em reais por kWh? <input type="text" id="in_valor">
+    <button onclick="calculo()">Calcular Conta</button>
+
+    <div id="mensagem"></div>
+
+</body>
+</html>
+
+<script>
+    function calculo(){
+        var consumo = Number(in_consumo.value);
+        var valor = Number(in_valor.value);
+
+        var custoConsumo = consumo * valor;
+
+        if(consumo > 300){
+            var acrescimo = (custoConsumo * 10) / 100;
+            custoConsumo = custoConsumo + acrescimo; 
+        }
+
+        mensagem.innerHTML = `o valor da conta totalizou R$${custoConsumo}.<br><br> `;
+
+        if(consumo <= 300){
+            mensagem.innerHTML += `Gastos dentro do esperado.`;
+        }else if(consumo <= 500){
+            mensagem.innerHTML += `Gastos excessivos, multa aplicada.`;
+        }else{
+            mensagem.innerHTML += `Economize energia, sua conta está muito alta!`
+        }
+
+    }
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 - EX 9</title>
+</head>
+
+<body>
+    
+    Quantas horas de sono você dormiu? <input id="in_horas" type="text"> <br>
+    <button onclick="fun_calculo_sono()">Calcular sono</button>
+
+    <div id="div_mensagem"></div>
+
+</body>
+
+</html>
+
+<script>
+    
+    function fun_calculo_sono(){
+        var horas_dormidas = in_horas.value; 
+        var fase1 = Number(horas_dormidas) * 0.05;
+        var fase2 = Number(horas_dormidas) * 0.45;
+        var fase3 = Number(horas_dormidas) * 0.30;
+        var fase_rem = Number(horas_dormidas) * 0.20;
+        
+        var mensagem = 
+        `Ao dormir ${horas_dormidas} horas, você dormiu:<br>  
+        <br>
+        ${fase1} horas na fase 1<br> 
+        <br>
+        ${fase2} horas na fase 2<br>
+        <br>
+        ${fase3} horas na fase 3<br>
+        <br>
+        ${fase_rem} horas na fase REM`
+
+        div_mensagem.innerHTML = mensagem;
+
+    }
+
+    
+</script>

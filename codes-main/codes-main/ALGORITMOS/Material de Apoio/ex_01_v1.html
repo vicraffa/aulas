@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Idade: <input type="text" id="input_idade"> <br>
+    <button onclick="ir()">Ir para a festa</button>
+</body>
+</html>
+
+<script>
+    function ir () {
+        var idade = Number(input_idade.value); // armazena a idade inserida pelo usuário
+
+        // se a idade for menor que 18, exibe "Pedir permissão"
+        if (idade < 18) {
+            alert("Pedir permissão");
+        }
+        
+        alert("#partiuFesta"); // esse alerta SEMPRE SERÁ EXIBIDO!
+        
+        /*
+            Por estar fora das chaves do IF, o alerta acima será executado independentemente do funcionamento do IF.
+            - Ou seja, se a idade for realmente menor que 18, exibe "Pedir Permissão" e depois "#partiuFesta"
+            - Mas, caso a condição do IF seja FALSA, o primeiro alert será ignorado, exibindo somente "#partiuFesta" 
+        */
+    }
+</script>

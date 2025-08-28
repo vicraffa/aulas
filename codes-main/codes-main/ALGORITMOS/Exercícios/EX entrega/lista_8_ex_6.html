@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 08 - Ex 06</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+    Qual a nota do aluno? <input type="text" id="in_nota"><br>
+    Qual a frequência do aluno? <input type="text" id="in_freq"><br>
+    <button onclick="analisar()">Analisar Aluno</button>
+
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+
+<script>
+    
+    function analisar(){
+        var nota = Number(in_nota.value);
+        var freq = Number(in_freq.value);
+        
+        if(nota >= 0 && nota <= 10){
+            if(nota >= 0 && nota < 6){
+                div_mensagem.innerHTML = "Aluno ficou abaixo da média.<br>";
+            }else if(nota >= 6 && nota <= 8){
+                div_mensagem.innerHTML = "Aluno ficou na média.<br>";
+            }else{
+                div_mensagem.innerHTML = "Aluno acima da média.<br>";
+            }
+
+                if(freq >= 0 && freq <= 100){
+                    if(freq >= 75){
+                        div_mensagem.innerHTML += "Aluno aprovado por frequência.";
+                    }else{
+                        div_mensagem.innerHTML += "Aluno reprovado por frequência.";
+                    }
+                    }else{
+                        alert("Onde já se viu frequência <0 ou >100?!");
+                        div_mensagem.innerHTML = ""; 
+                    }
+        }else{
+            alert("Onde já se viu nota <0 ou >10?!");
+            div_mensagem.innerHTML = "";
+        }
+    }
+
+</script>

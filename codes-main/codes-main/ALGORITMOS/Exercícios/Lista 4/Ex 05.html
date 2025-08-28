@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 4 - EX 05</title>
+</head>
+<body>
+    
+    Quantos KWh são consumidos no mês? <input id="in_consumo" type="text"> <br>
+    <button onclick="calculo_energia()">Calcular conta de luz</button>
+
+</body>
+</html>
+
+<script>
+
+    function calculo_energia(){
+        var consumo_mes = Number(in_consumo.value);
+        var valor_pago = consumo_mes * 0.85;
+        var valor_desconto = valor_pago / 0.9;
+        
+
+        if(consumo_mes < 100){
+            alert(`O valor da conta a ser paga vai ser R$${valor_desconto}.`)
+        } else {
+            alert(`O valor da conta a ser paga será de R$${valor_pago}.`)    
+        }
+
+    }
+
+
+</script>

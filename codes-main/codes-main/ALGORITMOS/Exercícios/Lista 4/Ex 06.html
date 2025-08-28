@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 4 - EX 06</title>
+</head>
+<body>
+    
+    Qual o valor da sua renda familiar? <input type="text" id="in_renda"> <br>
+    Qual o valor da prestação? <input type="text" id="in_prestacao"> <br>
+    <button onclick="verificacao()">Verificar financiamento</button>
+
+    
+
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+
+<script>
+
+   function verificacao(){
+    var renda = Number(in_renda.value);
+    var prestacao = Number(in_prestacao.value);
+    var calculo = (prestacao / renda) * 100;    
+
+    var mensagem = `A prestação corresponde a ${calculo}% da renda familiar`;
+
+    div_mensagem.innerHTML = mensagem;
+
+    if(calculo > 30){
+        div_mensagem.innerHTML += `<br><span style="color : red; font-weight: 600">Será necessário complementar a renda familiar</span>`;    
+    }
+
+   }
+
+
+</script>

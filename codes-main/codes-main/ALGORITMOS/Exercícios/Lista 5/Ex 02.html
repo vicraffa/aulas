@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 05 - Ex 02</title>
+</head>
+<body>
+    
+    Qual a sua renda familiar mensal: <input type="text" id="in_renda"><br>
+    <button onclick="calculo()">Analisar Renda</button>
+
+    <div id="mensagem"></div>
+
+</body>
+</html>
+
+<script>
+    function calculo(){
+        var renda = Number(in_renda.value);
+
+        if(renda <= 250){
+            mensagem.innerHTML = "Classe E";
+        }else if(renda <= 900){
+            mensagem.innerHTML = "Classe D";
+        }else if(renda <= 2500){
+            mensagem.innerHTML = "Classe C";
+        }else if(renda <= 9500){
+            mensagem.innerHTML = "Classe B";
+        }else{
+            mensagem.innerHTML = "Classe A";
+        }
+    }
+</script>
