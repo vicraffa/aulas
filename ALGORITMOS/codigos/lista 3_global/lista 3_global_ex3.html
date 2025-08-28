@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 - Global - Ex 3</title>
+</head>
+<body>
+
+    <label for="in_valor_pecas">
+        Insira o valor recebido com a venda de peças:
+        <input type="text" id="in_valor_pecas">
+        <br>
+    </label>
+
+    <label for="in_valor_servicos">
+        Insira o valor recebido com a venda de serviços:
+        <input type="text" id="in_valor_servicos">
+        <br>
+    </label>
+
+    <label for="in_imposto">
+        Insira o valor percentual de (imposto) sobre os valores recebidos:
+        <input type="text" id="in_imposto">
+        <br>
+    </label>
+
+    <label for="in_gasto_mensal">
+        Insira o gasto realizado no mês
+        <input type="text" id="in_gasto_mensal">
+        <br>
+    </label>
+
+    <button onclick="btn_acumular()">Acumular</button>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    
+    var mes_atual = 0;
+    var valor_acumulado = 0;
+
+
+    function btn_acumular(){
+        var venda_pecas = Number(in_valor_pecas.value);
+        var venda_servicos = Number(in_valor_servicos.value);
+        var percentual_imposto = Number(in_imposto.value) / 100;
+        var gasto_mensal = Number(in_gasto_mensal.value);
+
+
+        var total_recebido = venda_pecas + venda_servicos;
+        var valor_imposto = total_recebido * percentual_imposto;
+        var total_recebido_sem_imposto = total_recebido - valor_imposto;
+
+
+        var saldo_final = total_recebido_sem_imposto - gasto_mensal;
+
+
+        valor_acumulado += saldo_final;
+        mes_atual++;
+
+
+        div_mensagem.innerHTML += 
+        `
+        Resumo do mês ${mes_atual}, Total recebido = R$ ${total_recebido} – Valor do Imposto = R$ ${valor_imposto} – Saldo Final de R$ ${total_recebido_sem_imposto} – Acumulado até o Momento = R$ ${valor_acumulado}.<br><br>
+        `
+
+
+
+
+
+
+
+    };
+
+</script>

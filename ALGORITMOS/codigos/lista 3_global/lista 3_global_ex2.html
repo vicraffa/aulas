@@ -21,7 +21,22 @@
 </html>
 
 <script>
+    var saldo_atual = 0;
     
+    function depositar(){
+        var valor_inserido = Number(in_valor_inserido.value);
 
+        saldo_atual += valor_inserido;
+
+        div_mensagem.innerHTML = `Depósito de R$${valor_inserido} efetuado! Saldo atual: R$${saldo_atual}`;
+    };
+
+    function retirar(){
+        var valor_inserido = Number(in_valor_inserido.value);
+
+        saldo_atual -= valor_inserido;
+
+        div_mensagem.innerHTML = `Retirada de R$${valor_inserido} efetuada! Saldo atual: R$${saldo_atual} `;
+    }
 
 </script>

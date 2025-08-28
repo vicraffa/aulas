@@ -9,6 +9,25 @@
 
 <body>
     
+    <label for="in_passagem_onibus">
+        Insira o valor da passagem de ônibus:
+        <input type="text" id="in_passagem_onibus">
+        <br>
+    </label>
+
+    <label for="in_qtd_viagens">
+        Insira a quantidade de viagens que você faz por mês:
+        <input type="text" id="in_qtd_viagens">
+        <br>
+    </label>
+
+    <label for="in_distancia">
+        Insira a distância do trabalho até sua residência(em KM):
+        <input type="text" id="in_distancia">
+        <br>
+    </label>
+
+    <button onclick="calcular_VT()">Calcular VT</button>
 
     <div id="div_mensagem"></div>
 
@@ -17,5 +36,24 @@
 </html>
 
 <script>
+
+    function calcular_VT(){
+        var valor_unitario_passagem = Number(in_passagem_onibus.value);
+        var qtd_viagens = Number(in_qtd_viagens.value);
+        var distanciaKM = Number(in_distancia.value);
+        
+        
+        var viagens_app = qtd_viagens * 0.1;
+        var viagens_onibus = qtd_viagens - viagens_app;
+        
+        
+        var valor_final_passagem_onibus = viagens_onibus * valor_unitario_passagem;
+        
+        var valor_final_passagem_app = (viagens_app * distanciaKM) * 0.75;
+
+        var valor_final_mes = valor_final_passagem_app + valor_final_passagem_onibus;
+
+        div_mensagem.innerHTML = `Você vai gastar R$${valor_final_mes} por mês com transporte.`;
+    };
 
 </script>
