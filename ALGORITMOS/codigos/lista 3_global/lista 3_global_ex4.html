@@ -7,14 +7,80 @@
 </head>
 <body>
 
+    <h1>Gestão do TVM de Caldeira</h1>
     
+    <span>Quantidade de dias de operação:</span>
+    <input type="text" id="inOperacao">
+    <button onclick="processarDias()">Processar Dias</button><br><br>
+    <button onclick="pararOperacao()">Stop Operação</button>
+    <button onclick="reiniciarProcesso()">Reiniciar Processo</button>
+    <div id="divMensagem"></div>
+
+
 
     <div id="div_mensagem"></div>
 </body>
 </html>
 
 <script>
-    
+    var horasOperacao = 1000;
 
+    function processarDias(){
+        var inDiasOperacao = Number(inOperacao.value);
+        var horasAntes = horasOperacao;
+        var horasUsadas = inDiasOperacao * 24;
+        horasOperacao -= horasUsadas;
+
+        divMensagem.innerHTML = `O TVM anterior era de ${horasAntes} horas, após ${inDiasOperacao} dias de operação o TVM passou para ${horasOperacao} horas`;
+    }
+
+    function pararOperacao(){
+        horasOperacao -= 100;
+
+
+    }
+
+    function reiniciarProcesso(){
+        var inDiasOperacao = Number(inOperacao.value);
+
+    }
 
 </script>
+
+
+
+<!-- b)     Tenha um botão “Stop Operação”, que quando clicado irá subtrair 100 horas do TVM e emitir a mensagem (sem apagar as mensagens anteriores):
+
+·         O TVM anterior era de XXXX horas, após o Stop de operação o TVM passou para ZZZ horas
+
+Sendo que: XXXX são as horas existentes no TVM antes da subtração.
+
+       ZZZ é o saldo do TVM após a subtração
+
+
+c)      Tenha um botão “Reiniciar Processo”, que quando clicado irá alterar para 1000 horas o valor do TVM, vai limpar as mensagens anteriores  e emitirá a mensagem:
+
+·         Ainda existia  XXXX horas, com o reinicio do processo o TVM passou para 1000 horas
+
+Sendo que: XXXX são as horas existentes no TVM antes da subtração.
+
+
+
+
+
+
+
+
+       A manutenção da caldeira de energia elétrica tem um tempo de vida de manutenção (TVM) de 1000 horas. Sendo que eventos e utilização diária da caldeira diminuem o TVM e a cada manutenção realizada o TVM volta para 1000 horas. Faça um programa para controlar o TVM sendo que:
+
+a)      Receba a quantidade de dias de operação e tenha um botão “Processar DIAS”, que quando clicado irá subtrair as horas desses dias (24 horas/dia) do TVM e emitir a mensagem (sem apagar as mensagens anteriores):
+
+·         O TVM anterior era de XXXX horas, após Y dias de operação o TVM passou para ZZZ horas
+
+Sendo que: XXXX são as horas existentes no TVM antes da subtração.
+
+       Y é a quantidade de dias informado pelo usuário
+
+       ZZZ é o saldo do TVM após a subtração
+
+  -->
