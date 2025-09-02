@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC 1</title>
+</head>
+<body>
+    
+    <span>Insira a quantidade de energia consumida(kWh):</span>
+    <input type="text" id="inEnergia"><br>
+    <span>Insira a bandeira tarifária da sua energia(vermelha ou verde):</span>
+    <input type="text" id="inBandeira"><br>
+    <span>Insira a quantidade de MB tem o seu plano de internet:</span>
+    <input type="text" id="inInternet"><br>
+
+    <button onclick="calcularDespesa()">Calcular Despesa</button><br><br>
+    
+    <div id="divMensagem"></div>
+
+</body>
+</html>
+
+<script>
+    
+    function calcularDespesa(){
+        var porcentagemEnergia = 0;
+        var porcentagemInternet = 0;
+        var contaEnergia = 0;
+        var contaInternet = 0;
+        
+        var energia = Number(inEnergia.value);
+        var bandeira = inBandeira.value;
+        var internet = Number(inInternet.value);
+
+        console.log(energia);
+        console.log(bandeira);
+        console.log(internet);
+
+
+            if(bandeira == 'vermelha'){
+                contaEnergia = energia * 1.15;
+            }else{
+                contaEnergia = energia * 0.75;
+            };
+
+            if(internet <= 200){
+                contaInternet = internet + 40;
+            }else{
+                contaInternet = internet - 40;
+            };
+
+
+        var totalConta = contaEnergia + contaInternet;
+
+
+        //   265   100    totalConta * porcentagem = conta * 100 
+        //   75     x          75 * 100  = x * 265
+
+        //   (conta * 100) / totalConta = porcentagem
+        //   porcentagem = (conta * 100) / totalConta !!!!!!!!!!!!! 
+        //   FORMULA de porcentagem das contas
+
+        porcentagemEnergia = (contaEnergia * 100) / totalConta;
+        porcentagemInternet = (contaInternet * 100) / totalConta;
+
+        divMensagem.innerHTML = 
+        `
+        Gasto total de despesas mensal: R$ ${totalConta}. 
+        <br><br>
+        Com o consumo de ${energia} kWh na bandeira ${bandeira}, a conta de energia totaliza R$ ${contaEnergia}, representando ${porcentagemEnergia}% do total de despesas.
+        <br><br>
+        Com o consumo de ${internet} MB de internet, o valor do plano de internet totaliza R$ ${contaInternet}, representando ${porcentagemInternet}% do total de despesas.
+        `;
+
+    }
+
+</script>
